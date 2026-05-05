@@ -5,6 +5,7 @@ export const siteConfig = {
     "Simples, seguro e extremamente leve. Construído com Vanilla TypeScript e focado em performance.",
   contact: {
     email: "davidlsousa.dev@gmail.com",
-    github: "https://github.com/DavidLSousa/vixt",
+    github: "https://github.com/DavidLSousa",
   },
+  githubVixt: "https://github.com/DavidLSousa/vixt",
 };

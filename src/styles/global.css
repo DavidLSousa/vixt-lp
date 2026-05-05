@@ -134,6 +134,31 @@ h4 {
   background: var(--accent-vibrant);
 }
 
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 99px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+
+/* Button Global Resets */
+button:focus,
+button:active {
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+}
+
 /* Bento Grid System */
 .bento-grid {
   display: grid;

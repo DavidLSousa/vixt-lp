@@ -42,7 +42,7 @@ export const Home = ({ state }: { state: any }) => {
             <p>{t('heroDescription', state)}</p>
             <div className="vixt-flex gap-4">
               <Button className="btn-primary">{t('getStarted', state)}</Button>
-              <Button className="btn-secondary" style="background: transparent; border: 1px solid var(--border); color: white; padding: 0.875rem 2rem; border-radius: 99px; font-weight: 600; cursor: pointer;">GitHub</Button>
+              <Button className="btn-secondary" style="background:` transparent; border: 1px solid var(--border); color: white; padding: 0.875rem 2rem; border-radius: 99px; font-weight: 600; cursor: pointer;" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
             </div>
           </div>
         </Container>
@@ -166,18 +166,18 @@ export const Home = ({ state }: { state: any }) => {
             title: t('footerCommunity', state),
             links: [
               { text: 'GitHub', href: siteConfig.contact.github },
-              { text: 'X (Twitter)', href: '#' }
+              // { text: 'X (Twitter)', href: '#' }
             ]
           }
         ]}
         socialLinks={[
           { icon: 'github', href: siteConfig.contact.github },
-          { icon: 'x', href: '#' },
-          { icon: 'discord', href: '#' }
+          // { icon: 'x', href: '#' },
+          // { icon: 'discord', href: '#' }
         ]}
         developer={{
           name: 'David Sousa',
-          href: 'https://github.com/DavidLSousa'
+          href: siteConfig.contact.github
         }}
       />
     </div>
