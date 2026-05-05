@@ -1,21 +1,33 @@
 {
-  "welcome": "Welcome to Vixt",
+  "welcome": "Web Development Simplified, Secure, and Organized.",
+  "heroDescription": "Vixt is the Vanilla TS micro-framework built for those who value extreme performance, modular architecture, and security by default.",
   "getStarted": "Get Started",
+  "features": "Technical Pillars",
+  "security": "Native Security",
+  "securityText": "Vixt features automatic VNode sanitization layers, preventing XSS attacks without compromising performance. Your tags are clean, safe, and validated before touching the DOM.",
   "gettingStarted": "Getting Started",
   "components": "Components",
-  "features": "Features",
-  "security": "Security",
-  "contact": "Contact",
-  "changeLanguage": "Change Language",
-  "heroDescription": "Simple, secure and extremely lightweight. Built with Vanilla TypeScript and focused on performance.",
-  "securityText": "Vixt uses the native Virtual DOM to automatically sanitize all variables inserted into the HTML, natively preventing XSS (Cross-Site Scripting) attacks without overhead.",
-  "footerBrand": "Vixt Framework",
-  "footerDocs": "Docs",
+  "footerDocs": "Documentation",
   "footerCommunity": "Community",
-  "featureReactivityTitle": "Native Reactivity",
-  "featureReactivityDesc": "Based on native JavaScript Proxies, no Virtual DOM required.",
-  "featureSecurityTitle": "Security by Default",
-  "featureSecurityDesc": "Automatic input sanitization and XSS protection via Template Literals.",
-  "featurePerformanceTitle": "Extreme Performance",
-  "featurePerformanceDesc": "Zero dependencies in the final build. Pure and optimized output."
+  "footerBrand": "VIXT",
+
+  "pillarOrgTitle": "Organized Architecture",
+  "pillarOrgDesc": "Native guidance for modular development. Say goodbye to giant files and hello to a directory-per-component structure.",
+  "pillarCustomTitle": "Full Customization",
+  "pillarCustomDesc": "Standardized components that respect your Design Tokens. Use CSS variables to change everything in seconds.",
+  "pillarI18nTitle": "Native i18n",
+  "pillarI18nDesc": "Internationalization isn't an extra, it's the core. Switch languages at runtime without page reloads.",
+
+  "roadmapTitle": "The Future of Vixt",
+  "roadmapRouter": "Native Router: History API-based navigation fully integrated with reactive state.",
+  "roadmapAnim": "Declarative Animations: Fluid animation system via props, without heavy libraries.",
+  "roadmapSSR": "Edge Rendering: Specific optimizations for running on Cloudflare Workers and Vercel Edge.",
+
+  "noticeTitle": "Development Note",
+  "noticeSubtitle": "A note for the community",
+  "noticeText": "Vixt is a young project in constant evolution. Feedbacks, suggestions, and collaborations via GitHub are extremely welcome!",
+  "securityNoticeTitle": "Security and Responsibility",
+  "securityNoticeText": "While Vixt provides native protection layers, security is not a 'silver bullet'. Developers must maintain best practices and continuous vigilance in their projects.",
+
+  "version": "v1.0 Stable"
 }
