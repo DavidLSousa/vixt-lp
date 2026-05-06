@@ -244,7 +244,7 @@ export const Home = ({ state }: { state: any }) => {
         }
         links={[
           { text: t('navProposal', state), href: '#proposal-section' },
-          { text: t('security', state), href: '#security-section' },
+          { text: t('features', state), href: '#security-section' },
           { text: t('navComponents', state), href: '#data-demo-section' },
           { text: t('navRoadmap', state), href: '#roadmap-section' },
         ]}

@@ -320,10 +320,17 @@ button:active {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   /* Header 2 columns space-between */
-  .vixt-header__container {
-    display: flex !important;
+  .vixt-header .vixt-container.vixt-flex {
     flex-direction: row !important;
     justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
+  .vixt-header__left,
+  .vixt-header__right {
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
   }
 
