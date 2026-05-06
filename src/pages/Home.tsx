@@ -243,9 +243,10 @@ export const Home = ({ state }: { state: any }) => {
           </div>
         }
         links={[
-          { text: t('features', state), href: '#features-section' },
+          { text: t('navProposal', state), href: '#proposal-section' },
           { text: t('security', state), href: '#security-section' },
-          { text: 'Roadmap', href: '#roadmap-section' },
+          { text: t('navComponents', state), href: '#data-demo-section' },
+          { text: t('navRoadmap', state), href: '#roadmap-section' },
         ]}
         fixed={true}
         actions={
@@ -265,12 +266,12 @@ export const Home = ({ state }: { state: any }) => {
             </Typography>
             <p>{t('heroDescription', state)}</p>
             <div className="vixt-flex gap-4">
-              <Button className="btn-secondary" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
+              <Button className="btn-primary" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
             </div>
             <div className="reveal" style="margin-top: 2rem; max-width: 400px; width: 100%;">
-              <Code 
-                code="npm i @vixt-framework/core" 
-                language="bash" 
+              <Code
+                code="npm i @vixt-framework/core"
+                language="bash"
                 style="background: rgba(0,0,0,0.3); border-color: var(--border-active);"
               />
             </div>
@@ -291,16 +292,16 @@ export const Home = ({ state }: { state: any }) => {
               <p style="color: var(--fg-muted); line-height: 1.7;">{t('frameworkDesc', state)}</p>
               <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
                 <div className="vixt-flex vixt-flex--align-center gap-2">
-                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
-                   <span style="font-size: 0.9rem; font-weight: 600;">Inversão de Controle</span>
+                  <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                  <span style="font-size: 0.9rem; font-weight: 600;">Inversão de Controle</span>
                 </div>
                 <div className="vixt-flex vixt-flex--align-center gap-2">
-                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
-                   <span style="font-size: 0.9rem; font-weight: 600;">Motor de Renderização Seguro</span>
+                  <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                  <span style="font-size: 0.9rem; font-weight: 600;">Motor de Renderização Seguro</span>
                 </div>
                 <div className="vixt-flex vixt-flex--align-center gap-2">
-                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
-                   <span style="font-size: 0.9rem; font-weight: 600;">Estado Reativo Nativo</span>
+                  <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                  <span style="font-size: 0.9rem; font-weight: 600;">Estado Reativo Nativo</span>
                 </div>
               </div>
             </div>
@@ -308,7 +309,7 @@ export const Home = ({ state }: { state: any }) => {
         </Container>
       </Section>
 
-      <Section id="features-section" padding="lg">
+      <Section id="security-section" padding="lg">
         <Container>
           <div className="text-center mb-16 reveal">
             <Typography tag="h2" style="font-size: 2.5rem; margin-bottom: 1rem;">{t('features', state)}</Typography>
@@ -351,7 +352,7 @@ export const Home = ({ state }: { state: any }) => {
         </Container>
       </Section>
 
-      <Section id="quick-start" padding="lg">
+      <Section id="data-demo-section" padding="lg">
         <Container>
           <div className="text-center mb-16 reveal">
             <Badge variant="outline" style="margin-bottom: 1rem;">{t('compTitle', state)}</Badge>

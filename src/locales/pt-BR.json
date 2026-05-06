@@ -9,6 +9,9 @@
   "footerDocs": "Documentação",
   "footerCommunity": "Comunidade",
   "footerBrand": "VIXT",
+  "navProposal": "Acelerando sua criação",
+  "navComponents": "Componentes Nativos",
+  "navRoadmap": "O Futuro do Vixt",
 
   "pillarOrgTitle": "Arquitetura Organizada",
   "pillarOrgDesc": "Orientação nativa para desenvolvimento modular. Diga adeus aos arquivos gigantes e olá à estrutura de pastas por componente.",

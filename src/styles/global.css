@@ -115,6 +115,24 @@ h4 {
   margin-bottom: 3rem;
 }
 
+/* Hide hamburger on desktop */
+.vixt-header__toggle-btn {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .vixt-header__toggle-btn {
+    display: flex !important;
+  }
+}
+
+/* Ensure nav is visible on desktop */
+@media (min-width: 769px) {
+  .vixt-header__nav {
+    display: block !important;
+  }
+}
+
 /* Custom Buttons */
 .btn-primary {
   background: var(--accent);
@@ -297,4 +315,44 @@ button:active {
 
 .roadmap-item--future::before {
   border-color: var(--border);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Header 2 columns space-between */
+  .vixt-header__container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .vixt-header__nav {
+    display: none; /* Hide desktop nav if it exists */
+  }
+
+  /* Footer Centered */
+  .vixt-footer {
+    text-align: center !important;
+  }
+
+  .vixt-footer__container,
+  .vixt-footer__columns,
+  .vixt-footer__bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .vixt-footer__column {
+    align-items: center !important;
+    margin-bottom: 2rem;
+  }
+
+  .vixt-footer__social {
+    justify-content: center !important;
+    margin-top: 1rem;
+  }
 }
