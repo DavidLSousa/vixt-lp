@@ -1,7 +1,6 @@
 {
   "welcome": "Web Development Simplified, Secure, and Organized.",
   "heroDescription": "Vixt is the Vanilla TS micro-framework built for those who value extreme performance, modular architecture, and security by default.",
-  "getStarted": "Get Started",
   "features": "Technical Pillars",
   "security": "Native Security",
   "securityText": "Vixt features native VNode sanitization layers and Prototype Pollution protection. Your links, attributes, and states are automatically validated before touching the DOM, preventing XSS and injection attacks by default.",

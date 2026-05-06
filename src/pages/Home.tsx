@@ -265,8 +265,14 @@ export const Home = ({ state }: { state: any }) => {
             </Typography>
             <p>{t('heroDescription', state)}</p>
             <div className="vixt-flex gap-4">
-              <Button className="btn-primary">{t('getStarted', state)}</Button>
               <Button className="btn-secondary" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
+            </div>
+            <div className="reveal" style="margin-top: 2rem; max-width: 400px; width: 100%;">
+              <Code 
+                code="npm i @vixt-framework/core" 
+                language="bash" 
+                style="background: rgba(0,0,0,0.3); border-color: var(--border-active);"
+              />
             </div>
           </div>
         </Container>
