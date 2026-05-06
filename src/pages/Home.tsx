@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox, Tooltip, Dropdown, Accordion, SimpleTable } from '@vixt/core';
+import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox, Tooltip, Dropdown, Accordion, SimpleTable } from '@vixt-framework/core';
 import { siteConfig } from '../config/site';
 import { t } from '../config/i18n';
 

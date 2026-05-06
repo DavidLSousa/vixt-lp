@@ -247,8 +247,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.8.tgz#958b91c991b1867ced318bedea0e215ee050726e"
   integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
 
-"@vixt/core@file:../vixt":
-  version "1.0.0"
+"@vixt-framework/core@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@vixt-framework/core/-/core-1.0.3.tgz#71706ad31152d229f2f9187d3023fb0b010531d5"
+  integrity sha512-FI4NIxOTrD2DlCMyZLK6gFSNyjyBbruRw6csgsxR3qhBZKHfcl2UnJS9N7OFlcgqEHrZlU4w6nCgn7SQXTHGXw==
 
 esbuild@^0.21.3:
   version "0.21.5"

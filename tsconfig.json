@@ -9,10 +9,6 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "@vixt/core": ["../vixt/src/index.ts"]
-    },
     "noEmit": true,
     "strict": true,
     "noUnusedLocals": true,

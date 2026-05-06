@@ -1,8 +1,8 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import './styles/global.css';
-import '@vixt/core/styles/components.css';
-import { h, createStore, mountApp } from '@vixt/core';
+import '@vixt-framework/core/style.css';
+import { h, createStore, mountApp } from '@vixt-framework/core';
 import { Home } from './pages/Home';
 
 // 1. Create Initial State

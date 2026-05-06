@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vixt/core": "file:../vixt"
+    "@vixt-framework/core": "^1.0.3"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
