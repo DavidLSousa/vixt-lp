@@ -21,9 +21,9 @@ export const Home = ({ state }: { state: any }) => {
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compPrimitivesDesc', state)}</p>
           </div>
           <div style="min-width: 0;">
-            <Code 
+            <Code
               language="tsx"
-              code={`<Button variant="primary">Click</Button>\n<Typography tag="h1">Title</Typography>`} 
+              code={`<Button variant="primary">Click</Button>\n<Typography tag="h1">Title</Typography>`}
             />
           </div>
         </div>
@@ -38,25 +38,25 @@ export const Home = ({ state }: { state: any }) => {
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compForms', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFormsDesc', state)}</p>
-            
+
             <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px dashed var(--border);">
               <Typography tag="h4" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.5rem;">Live Demo</Typography>
-              <Switch 
-                label="Notifications" 
-                checked={state.demoSwitch ?? true} 
-                onChange={(val) => state.demoSwitch = val} 
+              <Switch
+                label="Notifications"
+                checked={state.demoSwitch ?? true}
+                onChange={(val) => state.demoSwitch = val}
               />
-              <Checkbox 
-                label="Stay signed in" 
-                checked={state.demoCheck ?? false} 
-                onChange={(val) => state.demoCheck = val} 
+              <Checkbox
+                label="Stay signed in"
+                checked={state.demoCheck ?? false}
+                onChange={(val) => state.demoCheck = val}
               />
             </div>
           </div>
           <div style="min-width: 0;">
-            <Code 
+            <Code
               language="tsx"
-              code={`<Switch \n  label="Notifications"\n  checked={state.enabled}\n  onChange={v => state.enabled = v}\n/>\n\n<Checkbox \n  label="Stay signed in"\n  checked={state.remem}\n  onChange={v => state.remem = v}\n/>`} 
+              code={`<Switch \n  label="Notifications"\n  checked={state.enabled}\n  onChange={v => state.enabled = v}\n/>\n\n<Checkbox \n  label="Stay signed in"\n  checked={state.remem}\n  onChange={v => state.remem = v}\n/>`}
             />
           </div>
         </div>
@@ -91,9 +91,9 @@ export const Home = ({ state }: { state: any }) => {
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compNavDesc', state)}</p>
           </div>
           <div style="min-width: 0;">
-            <Code 
+            <Code
               language="tsx"
-              code={`<Tabs items={...} />\n<Breadcrumbs />`} 
+              code={`<Tabs items={...} />\n<Breadcrumbs />`}
             />
           </div>
         </div>
@@ -108,13 +108,13 @@ export const Home = ({ state }: { state: any }) => {
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compOverlays', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compOverlaysDesc', state)}</p>
-            
+
             <div style="margin-top: 2rem; display: flex; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px dashed var(--border); align-items: center; justify-content: center;">
               <Tooltip content="Tooltip Top" position="top">
                 <Button variant="secondary" style="padding: 0.5rem 1rem;">Hover Me</Button>
               </Tooltip>
-              
-              <Dropdown 
+
+              <Dropdown
                 isOpen={state.demoDropdownOpen ?? false}
                 onToggle={(val) => state.demoDropdownOpen = val}
                 trigger={<Button variant="primary" style="padding: 0.5rem 1rem;">Menu</Button>}
@@ -128,9 +128,9 @@ export const Home = ({ state }: { state: any }) => {
             </div>
           </div>
           <div style="min-width: 0;">
-            <Code 
+            <Code
               language="tsx"
-              code={`<Tooltip content="Hi!" position="top">\n  <Button>Hover</Button>\n</Tooltip>\n\n<Dropdown \n  isOpen={state.isOpen}\n  onToggle={v => state.isOpen = v}\n  trigger={<Button>Menu</Button>}\n  items={[\n    { label: 'Profile', icon: <Icon name="user" /> },\n    { divider: true },\n    { label: 'Logout' }\n  ]}\n/>`} 
+              code={`<Tooltip content="Hi!" position="top">\n  <Button>Hover</Button>\n</Tooltip>\n\n<Dropdown \n  isOpen={state.isOpen}\n  onToggle={v => state.isOpen = v}\n  trigger={<Button>Menu</Button>}\n  items={[\n    { label: 'Profile', icon: <Icon name="user" /> },\n    { divider: true },\n    { label: 'Logout' }\n  ]}\n/>`}
             />
           </div>
         </div>
@@ -324,10 +324,10 @@ export const Home = ({ state }: { state: any }) => {
           </div>
 
           <div className="reveal">
-            <Tabs 
-              items={codeTabs} 
-              activeTab={state.activeCodeTab || 'primitives'} 
-              onChange={(id) => state.activeCodeTab = id} 
+            <Tabs
+              items={codeTabs}
+              activeTab={state.activeCodeTab || 'primitives'}
+              onChange={(id) => state.activeCodeTab = id}
             />
           </div>
         </Container>
