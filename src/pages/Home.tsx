@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox } from '@vixt/core';
+import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox, Tooltip, Dropdown } from '@vixt/core';
 import { siteConfig } from '../config/site';
 import { t } from '../config/i18n';
 
@@ -98,12 +98,51 @@ export const Home = ({ state }: { state: any }) => {
           </div>
         </div>
       )
+    },
+    {
+      id: 'overlays',
+      label: t('compOverlays', state),
+      icon: <Icon name="alert" />,
+      content: (
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+          <div style="min-width: 0;">
+            <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compOverlays', state)}</Typography>
+            <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compOverlaysDesc', state)}</p>
+            
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px dashed var(--border); align-items: center; justify-content: center;">
+              <Tooltip content="Tooltip Top" position="top">
+                <Button variant="secondary" style="padding: 0.5rem 1rem;">Hover Me</Button>
+              </Tooltip>
+              
+              <Dropdown 
+                isOpen={state.demoDropdownOpen ?? false}
+                onToggle={(val) => state.demoDropdownOpen = val}
+                trigger={<Button variant="primary" style="padding: 0.5rem 1rem;">Menu</Button>}
+                items={[
+                  { label: 'Profile', icon: <Icon name="github" /> },
+                  { label: 'Settings', icon: <Icon name="instagram" /> },
+                  { divider: true },
+                  { label: 'Logout', className: 'text-error' }
+                ]}
+              />
+            </div>
+          </div>
+          <div style="min-width: 0;">
+            <Code 
+              language="tsx"
+              code={`<Tooltip content="Hi!" position="top">\n  <Button>Hover</Button>\n</Tooltip>\n\n<Dropdown \n  isOpen={state.isOpen}\n  onToggle={v => state.isOpen = v}\n  trigger={<Button>Menu</Button>}\n  items={[\n    { label: 'Profile', icon: <Icon name="user" /> },\n    { divider: true },\n    { label: 'Logout' }\n  ]}\n/>`} 
+            />
+          </div>
+        </div>
+      )
     }
   ];
 
   return (
     <div className="app-wrapper">
       <Header
+        isMobileMenuOpen={state.mobileMenuOpen ?? false}
+        onMobileMenuToggle={(val) => state.mobileMenuOpen = val}
         brand={
           <div className="vixt-flex vixt-flex--align-center gap-2">
             <span style="font-weight: 800; letter-spacing: 2px; color: var(--accent)">{siteConfig.name}</span>

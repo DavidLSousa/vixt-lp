@@ -40,5 +40,7 @@
   "compFeedback": "Feedback",
   "compFeedbackDesc": "Informe o usuário com Badges, Toasts e Skeletons modernos e leves.",
   "compNav": "Navegação",
-  "compNavDesc": "Tabs, Breadcrumbs e Paginação para interfaces complexas e organizadas."
+  "compNavDesc": "Tabs, Breadcrumbs e Paginação para interfaces complexas e organizadas.",
+  "compOverlays": "Overlays",
+  "compOverlaysDesc": "Crie camadas de contexto com tooltips, menus dropdown e diálogos modais elegantes."
 }
