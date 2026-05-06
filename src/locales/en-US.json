@@ -42,5 +42,8 @@
   "compNav": "Navigation",
   "compNavDesc": "Tabs, Breadcrumbs, and Pagination for complex and organized interfaces.",
   "compOverlays": "Overlays",
-  "compOverlaysDesc": "Create context layers with elegant tooltips, dropdown menus, and modal dialogs."
+  "compOverlaysDesc": "Create context layers with elegant tooltips, dropdown menus, and modal dialogs.",
+  "compData": "Data",
+  "compDataTitle": "Data Visualization",
+  "compDataDesc": "Transform raw data into readable information with high-performance Accordions and Tables."
 }

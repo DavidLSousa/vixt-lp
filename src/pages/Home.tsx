@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox, Tooltip, Dropdown } from '@vixt/core';
+import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox, Tooltip, Dropdown, Accordion, SimpleTable } from '@vixt/core';
 import { siteConfig } from '../config/site';
 import { t } from '../config/i18n';
 
@@ -15,7 +15,7 @@ export const Home = ({ state }: { state: any }) => {
       label: t('compPrimitives', state),
       icon: <Icon name="alert" />,
       content: (
-        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compPrimitives', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compPrimitivesDesc', state)}</p>
@@ -34,7 +34,7 @@ export const Home = ({ state }: { state: any }) => {
       label: t('compForms', state),
       icon: <Icon name="github" />,
       content: (
-        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compForms', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFormsDesc', state)}</p>
@@ -67,7 +67,7 @@ export const Home = ({ state }: { state: any }) => {
       label: t('compFeedback', state),
       icon: <Icon name="alert" />,
       content: (
-        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compFeedback', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFeedbackDesc', state)}</p>
@@ -85,7 +85,7 @@ export const Home = ({ state }: { state: any }) => {
       label: t('compNav', state),
       icon: <Icon name="x" />,
       content: (
-        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compNav', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compNavDesc', state)}</p>
@@ -104,7 +104,7 @@ export const Home = ({ state }: { state: any }) => {
       label: t('compOverlays', state),
       icon: <Icon name="alert" />,
       content: (
-        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compOverlays', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compOverlaysDesc', state)}</p>
@@ -134,8 +134,101 @@ export const Home = ({ state }: { state: any }) => {
             />
           </div>
         </div>
-      )
-    }
+      ),
+    },
+    {
+      id: "data",
+      label: t("compData", state),
+      icon: <Icon name="alert" />,
+      content: (
+        <div className="vixt-grid vixt-grid--1 gap-8">
+          <div style="background: var(--bg-soft); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+            <Typography tag="h3" style="margin-bottom: 2rem;">
+              {t("compDataTitle", state)}
+            </Typography>
+
+            <div className="vixt-grid vixt-grid--2 gap-12">
+              <div>
+                <Typography
+                  tag="h4"
+                  style="margin-bottom: 1.5rem; opacity: 0.7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;"
+                >
+                  Accordion
+                </Typography>
+                <Accordion
+                  activeId={state.demoAccordionActive ?? "1"}
+                  onChange={(id) => (state.demoAccordionActive = id)}
+                  items={[
+                    {
+                      id: "1",
+                      title: "Performance Extrema",
+                      content:
+                        "O Vixt pesa menos de 5kb gzipped e não utiliza Virtual DOM pesado, garantindo renderizações instantâneas.",
+                    },
+                    {
+                      id: "2",
+                      title: "Segurança XSS",
+                      content:
+                        "Sanitização automática de todas as propriedades e conteúdos antes de tocar o DOM real.",
+                    },
+                    {
+                      id: "3",
+                      title: "TypeScript Nativo",
+                      content:
+                        "Desenvolvido em TS para oferecer a melhor experiência de autocompletar e segurança de tipos.",
+                    },
+                  ]}
+                />
+              </div>
+
+              <div>
+                <Typography
+                  tag="h4"
+                  style="margin-bottom: 1.5rem; opacity: 0.7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;"
+                >
+                  SimpleTable
+                </Typography>
+                <SimpleTable
+                  columns={[
+                    { key: "name", label: "Nome", sortable: true },
+                    { key: "role", label: "Cargo" },
+                    {
+                      key: "status",
+                      label: "Status",
+                      render: (val) => (
+                        <Badge variant={val === "Ativo" ? "success" : "warning"}>
+                          {val}
+                        </Badge>
+                      ),
+                    },
+                  ]}
+                  data={[
+                    { name: "David Sousa", role: "CTO", status: "Ativo" },
+                    { name: "Antigravity AI", role: "Assistant", status: "Ativo" },
+                    { name: "Legacy System", role: "DevOps", status: "Manutenção" },
+                  ]}
+                  sortKey={state.tableSortKey ?? "name"}
+                  sortOrder={state.tableSortOrder ?? "asc"}
+                  onSort={(key) => {
+                    state.tableSortOrder =
+                      state.tableSortKey === key && state.tableSortOrder === "asc"
+                        ? "desc"
+                        : "asc";
+                    state.tableSortKey = key;
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <div style="min-width: 0;">
+            <Code
+              language="tsx"
+              code={`<Accordion \n  activeId={state.id}\n  onChange={id => state.id = id}\n  items={[...]} \n/>\n\n<SimpleTable \n  columns={[...]}\n  data={[...]}\n  sortKey={state.key}\n  onSort={key => ...}\n/>`}
+            />
+          </div>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -278,7 +371,7 @@ export const Home = ({ state }: { state: any }) => {
 
       <Section id="notice-section" padding="lg">
         <Container>
-          <div className="reveal" style="border: 1px solid var(--border-alert); padding: 3rem; border-radius: 24px; background: var(--bg-soft); position: relative; overflow: hidden;">
+          <div className="reveal" style="border: 1px solid var(--border-alert); padding: clamp(1rem, 5vw, 3rem); border-radius: 24px; background: var(--bg-soft); position: relative; overflow: hidden;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
               <div style="color: var(--border-alert); background: rgba(230, 246, 54, 0.1); padding: 10px; border-radius: 12px; display: flex;">
                 <Icon name="alert" />

@@ -42,5 +42,8 @@
   "compNav": "Navegação",
   "compNavDesc": "Tabs, Breadcrumbs e Paginação para interfaces complexas e organizadas.",
   "compOverlays": "Overlays",
-  "compOverlaysDesc": "Crie camadas de contexto com tooltips, menus dropdown e diálogos modais elegantes."
+  "compOverlaysDesc": "Crie camadas de contexto com tooltips, menus dropdown e diálogos modais elegantes.",
+  "compData": "Dados",
+  "compDataTitle": "Visualização de Dados",
+  "compDataDesc": "Transforme dados brutos em informações legíveis com Accordions e Tabelas de alta performance."
 }
