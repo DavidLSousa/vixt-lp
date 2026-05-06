@@ -18,10 +18,16 @@
   "pillarI18nTitle": "Native i18n",
   "pillarI18nDesc": "Internationalization isn't an extra, it's the core. Switch languages at runtime without page reloads.",
 
+  "proposalTitle": "Accelerating Your Creation",
+  "proposalText": "Vixt offers a library of pre-built components designed for speed. Gain native organization and security while maintaining full design flexibility with our CSS token system.",
+  
+  "frameworkTitle": "Much More Than a Library",
+  "frameworkDesc": "Vixt is a complete micro-framework that handles the complexity for you. With inversion of control, its own rendering engine, and reactive state, you focus on what matters: your product.",
+
   "roadmapTitle": "The Future of Vixt",
-  "roadmapRouter": "Native Router: History API-based navigation fully integrated with reactive state.",
-  "roadmapAnim": "Declarative Animations: Fluid animation system via props, without heavy libraries.",
-  "roadmapSSR": "Edge Rendering: Specific optimizations for running on Cloudflare Workers and Vercel Edge.",
+  "roadmapRouter": "Native Router: History API-based navigation fully integrated with reactive state, enabling robust SPAs.",
+  "roadmapSSR": "Server-Side Rendering (SSR): Optimization for SEO and instant loading in any environment.",
+  "roadmapCLI": "Vixt CLI: Command-line tool for instant scaffolding of new projects and components.",
 
   "noticeTitle": "Development Note",
   "noticeSubtitle": "A note for the community",

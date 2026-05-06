@@ -272,6 +272,36 @@ export const Home = ({ state }: { state: any }) => {
         </Container>
       </Section>
 
+      <Section id="proposal-section" padding="lg" variant="alternate">
+        <Container>
+          <div className="vixt-grid vixt-grid--2 gap-12 vixt-flex--align-center">
+            <div className="reveal">
+              <Badge variant="primary" style="margin-bottom: 1rem;">Framework Thinking</Badge>
+              <Typography tag="h2" style="font-size: 2.5rem; margin-bottom: 1.5rem;">{t('proposalTitle', state)}</Typography>
+              <p style="color: var(--fg-muted); line-height: 1.8; font-size: 1.1rem;">{t('proposalText', state)}</p>
+            </div>
+            <div className="reveal" style="background: var(--bg-soft); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border);">
+              <Typography tag="h3" style="margin-bottom: 1rem; color: var(--accent);">{t('frameworkTitle', state)}</Typography>
+              <p style="color: var(--fg-muted); line-height: 1.7;">{t('frameworkDesc', state)}</p>
+              <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <div className="vixt-flex vixt-flex--align-center gap-2">
+                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                   <span style="font-size: 0.9rem; font-weight: 600;">Inversão de Controle</span>
+                </div>
+                <div className="vixt-flex vixt-flex--align-center gap-2">
+                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                   <span style="font-size: 0.9rem; font-weight: 600;">Motor de Renderização Seguro</span>
+                </div>
+                <div className="vixt-flex vixt-flex--align-center gap-2">
+                   <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></div>
+                   <span style="font-size: 0.9rem; font-weight: 600;">Estado Reativo Nativo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       <Section id="features-section" padding="lg">
         <Container>
           <div className="text-center mb-16 reveal">
@@ -349,13 +379,13 @@ export const Home = ({ state }: { state: any }) => {
               <div className="roadmap-item">
                 <div>
                   <Typography tag="h4" style="color: var(--accent); margin-bottom: 0.5rem;">V1.1 - Q3 2026</Typography>
-                  <p style="color: var(--fg-muted);">{t('roadmapAnim', state)}</p>
+                  <p style="color: var(--fg-muted);">{t('roadmapRouter', state)}</p>
                 </div>
               </div>
               <div className="roadmap-item">
                 <div>
                   <Typography tag="h4" style="color: var(--accent); margin-bottom: 0.5rem;">V1.2 - Q4 2026</Typography>
-                  <p style="color: var(--fg-muted);">{t('roadmapRouter', state)}</p>
+                  <p style="color: var(--fg-muted);">{t('roadmapCLI', state)}</p>
                 </div>
               </div>
               <div className="roadmap-item roadmap-item--future">
