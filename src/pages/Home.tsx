@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, Container, Section, Typography, Button, Header, Footer, Icon } from '@vixt/core';
+import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code } from '@vixt/core';
 import { siteConfig } from '../config/site';
 import { t } from '../config/i18n';
 
@@ -9,13 +9,91 @@ export const Home = ({ state }: { state: any }) => {
     state.lang = state.lang === 'pt-BR' ? 'en-US' : 'pt-BR';
   };
 
+  const codeTabs = [
+    {
+      id: 'primitives',
+      label: t('compPrimitives', state),
+      icon: <Icon name="alert" />,
+      content: (
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+          <div style="min-width: 0;">
+            <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compPrimitives', state)}</Typography>
+            <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compPrimitivesDesc', state)}</p>
+          </div>
+          <div style="min-width: 0;">
+            <Code 
+              language="tsx"
+              code={`<Button variant="primary">Click</Button>\n<Typography tag="h1">Title</Typography>`} 
+            />
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'forms',
+      label: t('compForms', state),
+      icon: <Icon name="github" />,
+      content: (
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+          <div style="min-width: 0;">
+            <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compForms', state)}</Typography>
+            <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFormsDesc', state)}</p>
+          </div>
+          <div style="min-width: 0;">
+            <Code 
+              language="tsx"
+              code={`<InputField label="Email" />\n<FormGroup>...</FormGroup>`} 
+            />
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'feedback',
+      label: t('compFeedback', state),
+      icon: <Icon name="alert" />,
+      content: (
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+          <div style="min-width: 0;">
+            <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compFeedback', state)}</Typography>
+            <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFeedbackDesc', state)}</p>
+          </div>
+          <div className="vixt-flex gap-2" style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); align-items: center; justify-content: center; min-width: 0;">
+            <Badge variant="success">Success</Badge>
+            <Badge variant="error">Error</Badge>
+            <Badge variant="warning">Warning</Badge>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'navigation',
+      label: t('compNav', state),
+      icon: <Icon name="x" />,
+      content: (
+        <div className="vixt-grid vixt-grid--2 gap-8" style="background: var(--bg-soft); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); overflow: hidden;">
+          <div style="min-width: 0;">
+            <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compNav', state)}</Typography>
+            <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compNavDesc', state)}</p>
+          </div>
+          <div style="min-width: 0;">
+            <Code 
+              language="tsx"
+              code={`<Tabs items={...} />\n<Breadcrumbs />`} 
+            />
+          </div>
+        </div>
+      )
+    }
+  ];
+
   return (
     <div className="app-wrapper">
       <Header
         brand={
           <div className="vixt-flex vixt-flex--align-center gap-2">
             <span style="font-weight: 800; letter-spacing: 2px; color: var(--accent)">{siteConfig.name}</span>
-            <span style="font-size: 0.7rem; background: var(--accent-soft); padding: 2px 8px; border-radius: 4px; color: var(--accent)">{t('version', state)}</span>
+            <Badge variant="primary" style="font-size: 0.6rem;">{t('version', state)}</Badge>
           </div>
         }
         links={[
@@ -42,7 +120,7 @@ export const Home = ({ state }: { state: any }) => {
             <p>{t('heroDescription', state)}</p>
             <div className="vixt-flex gap-4">
               <Button className="btn-primary">{t('getStarted', state)}</Button>
-              <Button className="btn-secondary" style="background:` transparent; border: 1px solid var(--border); color: white; padding: 0.875rem 2rem; border-radius: 99px; font-weight: 600; cursor: pointer;" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
+              <Button className="btn-secondary" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
             </div>
           </div>
         </Container>
@@ -87,6 +165,24 @@ export const Home = ({ state }: { state: any }) => {
               <Typography tag="h3" style="margin-bottom: 1rem; font-size: 1.5rem;">{t('security', state)}</Typography>
               <p style="color: var(--fg-muted); line-height: 1.8;">{t('securityText', state)}</p>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section id="quick-start" padding="lg">
+        <Container>
+          <div className="text-center mb-16 reveal">
+            <Badge variant="outline" style="margin-bottom: 1rem;">{t('compTitle', state)}</Badge>
+            <Typography tag="h2" style="font-size: 2.5rem; margin-bottom: 1rem;">{t('compTitle', state)}</Typography>
+            <p style="color: var(--fg-muted);">{t('compDesc', state)}</p>
+          </div>
+
+          <div className="reveal">
+            <Tabs 
+              items={codeTabs} 
+              activeTab={state.activeCodeTab || 'primitives'} 
+              onChange={(id) => state.activeCodeTab = id} 
+            />
           </div>
         </Container>
       </Section>

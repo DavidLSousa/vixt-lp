@@ -29,5 +29,16 @@
   "securityNoticeTitle": "Segurança e Responsabilidade",
   "securityNoticeText": "Embora o Vixt forneça camadas nativas de proteção, a segurança não é uma 'bala de prata'. Desenvolvedores devem manter boas práticas e vigilância contínua em seus projetos.",
 
-  "version": "v1.0 Estável"
+  "version": "v1.0 Estável",
+
+  "compTitle": "Componentes Nativos",
+  "compDesc": "Uma biblioteca em expansão de componentes prontos para uso.",
+  "compPrimitives": "Primitivos",
+  "compPrimitivesDesc": "Base sólida com Typography, Button e Container. Estilização via props e suporte total a acessibilidade.",
+  "compForms": "Formulários",
+  "compFormsDesc": "Inputs, Selects e FormGroups inteligentes com validação nativa e sanitização automática.",
+  "compFeedback": "Feedback",
+  "compFeedbackDesc": "Informe o usuário com Badges, Toasts e Skeletons modernos e leves.",
+  "compNav": "Navegação",
+  "compNavDesc": "Tabs, Breadcrumbs e Paginação para interfaces complexas e organizadas."
 }
