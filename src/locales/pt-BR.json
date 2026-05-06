@@ -4,7 +4,7 @@
   "getStarted": "Começar agora",
   "features": "Pilares Técnicos",
   "security": "Segurança Nativa",
-  "securityText": "O Vixt possui camadas automáticas de sanitização de VNodes, prevenindo ataques XSS sem comprometer a performance. Suas tags são limpas, seguras e validadas antes de tocar o DOM.",
+  "securityText": "O Vixt possui camadas nativas de sanitização de VNodes e proteção contra Prototype Pollution. Seus links, atributos e estados são validados automaticamente antes de tocar o DOM, prevenindo XSS e ataques de injeção por padrão.",
   "gettingStarted": "Primeiros Passos",
   "components": "Componentes",
   "footerDocs": "Documentação",
