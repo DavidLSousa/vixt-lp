@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code } from '@vixt/core';
+import { h, Container, Section, Typography, Button, Header, Footer, Icon, Tabs, Badge, Code, Switch, Checkbox } from '@vixt/core';
 import { siteConfig } from '../config/site';
 import { t } from '../config/i18n';
 
@@ -38,11 +38,25 @@ export const Home = ({ state }: { state: any }) => {
           <div style="min-width: 0;">
             <Typography tag="h3" style="color: var(--accent); margin-bottom: 1rem;">{t('compForms', state)}</Typography>
             <p style="color: var(--fg-muted); line-height: 1.8; overflow-wrap: break-word;">{t('compFormsDesc', state)}</p>
+            
+            <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px dashed var(--border);">
+              <Typography tag="h4" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.5rem;">Live Demo</Typography>
+              <Switch 
+                label="Notifications" 
+                checked={state.demoSwitch ?? true} 
+                onChange={(val) => state.demoSwitch = val} 
+              />
+              <Checkbox 
+                label="Stay signed in" 
+                checked={state.demoCheck ?? false} 
+                onChange={(val) => state.demoCheck = val} 
+              />
+            </div>
           </div>
           <div style="min-width: 0;">
             <Code 
               language="tsx"
-              code={`<InputField label="Email" />\n<FormGroup>...</FormGroup>`} 
+              code={`<Switch \n  label="Notifications"\n  checked={state.enabled}\n  onChange={v => state.enabled = v}\n/>\n\n<Checkbox \n  label="Stay signed in"\n  checked={state.remem}\n  onChange={v => state.remem = v}\n/>`} 
             />
           </div>
         </div>
