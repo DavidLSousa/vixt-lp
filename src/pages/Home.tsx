@@ -266,7 +266,7 @@ export const Home = ({ state }: { state: any }) => {
             </Typography>
             <p>{t('heroDescription', state)}</p>
             <div className="vixt-flex gap-4">
-              <Button className="btn-primary" onClick={() => window.open(siteConfig.contact.github, "_blank")}>GitHub</Button>
+              <Button className="btn-primary" onClick={() => window.open(siteConfig.githubVixt, "_blank")}>GitHub</Button>
             </div>
             <div className="reveal" style="margin-top: 2rem; max-width: 400px; width: 100%;">
               <Code
